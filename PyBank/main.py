@@ -1,7 +1,5 @@
 # ## PyBank
-import os
 import csv
-import math 
 
 with open("Resources/budget_data.csv", 'r') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
