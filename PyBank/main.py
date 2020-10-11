@@ -36,7 +36,9 @@ for index, m in enumerate(change_by_month):
         min_index = index+1
 
 # * As an example, your analysis should look similar to the one below:
-print(total_months, total_profits, average,max_profit, max_loss)
+# * In addition, your final script should both print the analysis to the terminal and export a text file with the results.
+
+#print(total_months, total_profits, average,max_profit, max_loss)
 
 template='''
    Financial Analysis
@@ -47,5 +49,9 @@ template='''
    Greatest Increase in Profits: {} (${})
    Greatest Decrease in Profits: {} (${})
 '''
-print(template.format(total_months, total_profits, average, months[max_index], max_profit, months[min_index], max_loss))
-# * In addition, your final script should both print the analysis to the terminal and export a text file with the results.
+report = template.format(total_months, total_profits, average, months[max_index], max_profit, months[min_index], max_loss)
+print(report)
+
+with open("analysis/report.txt", 'w') as text: 
+    text.write(report)
+
