@@ -42,7 +42,7 @@ template='''
 -------------------------
  '''
 template2 ='''
- {}: {}% ({}) 
+ {}: {:.4f}% ({}) 
 '''
 template3 = '''
  -------------------------
@@ -51,11 +51,8 @@ template3 = '''
 t2_list=[template2.format(candidate,percentages[candidate],total_votes_candidate[candidate]) for candidate in total_votes_candidate.keys()]
 
 report = template.format(total_votes)+''.join(t2_list) + template3.format(winner_name)
-
 print(report)
-# report = template.format(total_months, total_profits, average, months[max_index], max_profit, months[min_index], max_loss)
-# print(report)
 
-# with open("analysis/report.txt", 'w') as text: 
-#     text.write(report)
+with open("analysis/report.txt", 'w') as text: 
+    text.write(report)
 
