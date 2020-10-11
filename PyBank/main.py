@@ -45,7 +45,7 @@ template='''
    ----------------------------
    Total Months: {}
    Total: ${}
-   Average  Change: ${0:.2f}
+   Average  Change: ${:.2f}
    Greatest Increase in Profits: {} (${})
    Greatest Decrease in Profits: {} (${})
 '''
